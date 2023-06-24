@@ -1,0 +1,22 @@
+{
+    "name": "welber/apieventos",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "wbcastilho",
+            "email": "welber.castilho@yahoo.com.br"
+        }
+    ],
+    "require": {
+        "slim/slim": "^4.11",
+        "slim/psr7": "^1.6",           
+        "doctrine/dbal": "^3.6",
+        "php-di/php-di": "^6.4",
+        "symfony/cache": "^5.4",
+        "symfony/dotenv": "^5.4"
+    }
+}
