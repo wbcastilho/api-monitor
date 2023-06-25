@@ -6,6 +6,7 @@ use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;
 use DI\autowire;
 use app\models\Equipamento;
+use app\models\User;
 
 return [
     Connection::class => function () {
@@ -20,5 +21,6 @@ return [
         ];
         return DriverManager::getConnection($connectionParams);
     },   
-    Equipamento::class => \DI\autowire(Equipamento::class)
+    Equipamento::class => \DI\autowire(Equipamento::class),
+    User::class => \DI\autowire(User::class)
 ];

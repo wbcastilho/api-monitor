@@ -32,14 +32,14 @@ class SseController extends BaseController
 
         while (1) {
             $now = date('Y-m-d H:i:s');
-            $event = sprintf("event: %s\ndata: %s\n\n", 'ping', json_encode(['time' => $now]));
+            // $event = sprintf("event: %s\ndata: %s\n\n", 'ping', json_encode(['time' => $now]));
 
-            // $strJson = json_encode(['time' => $now]);
+            $strJson = json_encode(['time' => $now]);
                 
-            // // Evento ultimos-eventos              
-            // echo "event: ultimos-eventos\n"; 
-            // echo "data: {$strJson}\n\n";    
-            // // Fim do evento
+            // Evento ultimos-eventos              
+            $event = "event: ultimos-eventos\n"; 
+            $event .= "data: {$strJson}\n\n";    
+            // Fim do evento
                 
             // Add a whitespace to the end
             $body->write($event . str_pad("", 15000));
